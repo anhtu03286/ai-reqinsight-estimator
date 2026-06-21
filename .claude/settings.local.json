@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk ls *)",
+      "Bash(Get-ChildItem \"D:\\\\AI\\\\Example\\\\5days-project\\\\offshore-agent-v2\\\\docs\" -Recurse)",
+      "Bash(Select-Object FullName)"
+    ]
+  }
+}
