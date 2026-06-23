@@ -9,6 +9,7 @@ Usage:
 """
 
 import io
+from datetime import datetime
 from pathlib import Path
 from openpyxl import Workbook
 from openpyxl.styles import (
@@ -21,7 +22,8 @@ from openpyxl.chart.series import DataPoint
 # ── Output path ──────────────────────────────────────────────────────────────
 OUTPUT_DIR = Path(__file__).parent.parent / "reports"
 OUTPUT_DIR.mkdir(exist_ok=True)
-OUTPUT_FILE = OUTPUT_DIR / "ReqInsight_Quotation_Report.xlsx"
+RUN_TIMESTAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
+OUTPUT_FILE = OUTPUT_DIR / f"ReqInsight_Quotation_Report_{RUN_TIMESTAMP}.xlsx"
 
 # ── Styles ───────────────────────────────────────────────────────────────────
 DARK_BLUE   = "1F4E79"
